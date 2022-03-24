@@ -14,9 +14,13 @@ def main():
     okno = tk.Tk()
     okno.title("Kalkulačka")
     canvas = tk.Canvas(okno, height=300, width=600)
-    canvas.grid(columnspan=1, rowspan=3)
+    canvas.grid(columnspan=3, rowspan=3)
+
+    input = tk.Entry()
+    input.grid(row=0, column=1, sticky="nswe")
+
     btn_frame = tk.Frame(okno)
-    btn_frame.grid(row=0)
+    btn_frame.grid(row=1, column=1)
 
     # 1 row
     one = tk.Button(btn_frame, text="1", font="Arial 20", border=0, padx=15, command=lambda: handle_click("1"), bg="#4ECDC4", activebackground="#1B8A83")
